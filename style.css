@@ -42,18 +42,36 @@ body{
 }
 
 .card{
-  height:500px;
+  height:520px;
   display:flex;
   align-items:flex-end;
   padding:20px;
   font-size:18px;
   color:white;
+  background-size:cover;
+  background-position:center;
 }
 
-.decking{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae'); background-size:cover;}
-.sauna{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b'); background-size:cover;}
-.roof{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e'); background-size:cover;}
-.facade{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url('https://images.unsplash.com/photo-1497366216548-37526070297c'); background-size:cover;}
+/* HIGH QUALITY STOCK IMAGES */
+.decking{
+  background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200');
+}
+
+.sauna{
+  background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+  url('https://images.unsplash.com/photo-1582582429416-ef0e1a3a2c79?q=80&w=1200');
+}
+
+.roof{
+  background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+  url('https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=1200');
+}
+
+.facade{
+  background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+  url('https://images.unsplash.com/photo-1505842465776-3d90f616310d?q=80&w=1200');
+}
 
 .about{
   padding:120px 60px;
