@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="description" content="Xpress Bygg — bastur, terrasser, fasader och tak. Raseborg.">
+<title>Xpress Bygg — Kommer snart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@1,600;1,800&family=Saira:wght@600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#EEEFEB;--ink:#141613;--muted:#5C6157;
+  --green:#7CB93E;--green-deep:#5E9427;--line:rgba(20,22,19,.14);
+}
+html,body{height:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:'Figtree',system-ui,sans-serif;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:32px 24px;
+  overflow:hidden;position:relative;
+}
+.bg-x{
+  position:absolute;right:-16vw;top:50%;
+  transform:translateY(-50%) skewX(-6deg);
+  width:70vmin;height:auto;opacity:.08;pointer-events:none;
+}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:44px;position:relative}
+.brand svg{height:34px;width:34px;overflow:visible}
+.brand-word{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;
+  font-size:34px;line-height:1;letter-spacing:.02em;text-transform:uppercase;
+  display:flex;align-items:baseline;gap:8px;white-space:nowrap;
+}
+.brand-word b{font-weight:800}
+.brand-word i{font-weight:600;letter-spacing:.14em;font-style:italic}
+h1{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:800;
+  text-transform:uppercase;line-height:.95;
+  font-size:clamp(40px,9vw,96px);
+  position:relative;
+}
+h1 .green{color:var(--green)}
+.langs{
+  margin-top:26px;max-width:560px;position:relative;
+  color:var(--muted);font-size:16px;line-height:1.7;
+}
+.langs span{display:block}
+.divider{
+  width:64px;height:3px;background:var(--green);
+  margin:36px auto 0;transform:skewX(-30deg);position:relative;
+}
+.contact{margin-top:36px;position:relative}
+.contact .label{
+  font-family:'Saira',sans-serif;font-weight:600;font-size:11px;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
+  display:block;margin-bottom:10px;
+}
+.contact a{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:700;
+  font-size:clamp(20px,3.4vw,28px);
+  color:var(--ink);text-decoration:none;
+  border-bottom:3px solid var(--green);
+  transition:color .2s;
+}
+.contact a:hover{color:var(--green-deep)}
+footer{
+  position:absolute;bottom:22px;left:0;right:0;
+  font-family:'Saira',sans-serif;font-weight:600;font-size:10px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<svg class="bg-x" viewBox="0 0 100 98" aria-hidden="true">
+  <polygon points="18,0 50,38 82,0 100,0 59,49 100,98 82,98 50,60 18,98 0,98 41,49 0,0"
+    fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+</svg>
+
+<div class="brand" aria-label="Xpress Bygg">
+  <svg viewBox="0 0 100 98" aria-hidden="true">
+    <polygon points="18,0 50,38 82,0 100,0 59,49 100,98 82,98 50,60 18,98 0,98 41,49 0,0"
+      fill="var(--green)" transform="skewX(-6) translate(6,0)"/>
+  </svg>
+  <span class="brand-word"><b>PRESS</b><i>BYGG</i></span>
+</div>
+
+<h1>Kommer <span class="green">snart.</span></h1>
+
+<p class="langs">
+  <span lang="sv">Vi bygger något nytt — bastur, terrasser, fasader och tak i Raseborg.</span>
+  <span lang="fi">Rakennamme jotain uutta — saunat, terassit, julkisivut ja katot Raaseporissa.</span>
+  <span lang="en">We're building something new — saunas, decks, facades and roofs in Raseborg.</span>
+</p>
+
+<div class="divider" aria-hidden="true"></div>
+
+<div class="contact">
+  <span class="label">Kontakt · Yhteydenotot · Contact</span>
+  <a href="mailto:info@xpressbygg.com">info@xpressbygg.com</a>
+</div>
+
+<footer>© <span id="yr">2026</span> Xpress Bygg · Raseborg</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
