@@ -31,7 +31,7 @@
   --radius:2px;
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
   background:var(--paper);
   color:var(--ink);
@@ -182,9 +182,9 @@ nav a:hover{border-color:var(--accent)}
 /* ── SECTIONS ─────────────────────────── */
 section{padding:100px 28px}
 .container{max-width:1180px;margin:0 auto}
-.sec-head{display:flex;align-items:baseline;gap:22px;margin-bottom:56px;flex-wrap:wrap}
-.sec-head h2{font-size:clamp(38px,5vw,60px)}
-.sec-head .label{transform:translateY(-4px)}
+.sec-head{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(38px,5.4vw,68px)}
+.sec-head h2 .accent{color:var(--accent)}
 
 /* services */
 .svc-grid{
@@ -300,6 +300,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   .contact-inner{grid-template-columns:1fr;gap:44px}
   #contact{clip-path:polygon(0 26px,100% 0,100% 100%,0 100%);padding:110px 20px 90px}
 }
+@media(max-width:600px){
+  nav ul li:has(.nav-cta){display:none}
+  .lang{margin-left:0}
+}
 @media(max-width:520px){
   .steps{grid-template-columns:1fr}
   .nav-inner{padding:12px 16px}
@@ -378,7 +382,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   <div class="container">
     <div class="sec-head reveal">
       <span class="label">Mitä rakennamme</span>
-      <h2 class="display">Neljä asiaa. Kunnolla tehtynä.</h2>
+      <h2 class="display">Neljä asiaa.<br><span class="accent">Kunnolla tehtynä.</span></h2>
     </div>
     <div class="svc-grid">
 
@@ -470,7 +474,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   <div class="container">
     <div class="sec-head reveal">
       <span class="label">Näin toimimme</span>
-      <h2 class="display">Yhteydenotosta luovutukseen</h2>
+      <h2 class="display">Yhteydenotosta<br><span class="accent">luovutukseen.</span></h2>
     </div>
     <div class="steps reveal">
       <div class="step">
@@ -502,7 +506,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   <div class="container">
     <div class="sec-head reveal">
       <span class="label">Miksi Xpress Bygg</span>
-      <h2 class="display">Pieni tiimi. Kovat standardit.</h2>
+      <h2 class="display">Pieni tiimi.<br><span class="accent">Kovat standardit.</span></h2>
     </div>
     <div class="why-layout">
       <div class="why-copy reveal">
