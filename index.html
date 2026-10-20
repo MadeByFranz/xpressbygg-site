@@ -226,17 +226,9 @@ section{padding:100px 28px}
 .step p{font-size:14px;color:var(--muted)}
 
 /* why us */
-.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.why-layout{max-width:760px}
 .why-copy p{font-size:17px;color:var(--muted);margin-bottom:18px}
 .why-copy p strong{color:var(--ink);font-weight:600}
-.why-list{display:grid;gap:0;border-top:1px solid var(--line)}
-.why-item{
-  display:flex;gap:16px;align-items:flex-start;
-  padding:20px 4px;border-bottom:1px solid var(--line);
-}
-.why-item .xmark{width:1.05em;height:1.05em;margin-top:4px}
-.why-item h4{font-family:'Saira',sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
-.why-item p{font-size:14px;color:var(--muted)}
 
 /* ── CONTACT (single dark band) ───────── */
 #contact{
@@ -299,7 +291,6 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   section{padding:72px 20px}
   .svc-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
-  .why-layout{grid-template-columns:1fr;gap:36px}
   .contact-inner{grid-template-columns:1fr;gap:44px}
   #contact{clip-path:polygon(0 26px,100% 0,100% 100%,0 100%);padding:110px 20px 90px}
 }
@@ -515,24 +506,6 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
       <div class="why-copy reveal">
         <p><strong>Allt vi bygger lever utomhus</strong>, i finländskt väder, genom finländska vintrar. Det formar vårt arbetssätt: fukthantering, ventilation och konstruktionsdetaljer först, finish sedan, och båda ordentligt.</p>
         <p>Vi är medvetet ett litet team. De som räknar på ditt projekt är de som bygger det. Du vet alltid vem som är på din arbetsplats och vem du ska ringa.</p>
-      </div>
-      <div class="why-list reveal">
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Fasta offerter, ärlig omfattning</h4><p>Överraskningar på plats diskuteras innan de faktureras.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Byggt för klimatet</h4><p>Detaljer dimensionerade för snölast, frost och slagregn, inte kopierade från mildare marknader.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Hushållsavdrag</h4><p>Som finländskt företag berättigar vår arbetsandel i regel till hushållsavdrag. Vi står för underlagen.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Ren nordisk design</h4><p>Enkla linjer, ärliga material och proportioner som passar huset, inte katalogen.</p></div>
-        </div>
       </div>
     </div>
   </div>

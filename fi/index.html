@@ -226,17 +226,9 @@ section{padding:100px 28px}
 .step p{font-size:14px;color:var(--muted)}
 
 /* why us */
-.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.why-layout{max-width:760px}
 .why-copy p{font-size:17px;color:var(--muted);margin-bottom:18px}
 .why-copy p strong{color:var(--ink);font-weight:600}
-.why-list{display:grid;gap:0;border-top:1px solid var(--line)}
-.why-item{
-  display:flex;gap:16px;align-items:flex-start;
-  padding:20px 4px;border-bottom:1px solid var(--line);
-}
-.why-item .xmark{width:1.05em;height:1.05em;margin-top:4px}
-.why-item h4{font-family:'Saira',sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
-.why-item p{font-size:14px;color:var(--muted)}
 
 /* ── CONTACT (single dark band) ───────── */
 #contact{
@@ -299,7 +291,6 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
   section{padding:72px 20px}
   .svc-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
-  .why-layout{grid-template-columns:1fr;gap:36px}
   .contact-inner{grid-template-columns:1fr;gap:44px}
   #contact{clip-path:polygon(0 26px,100% 0,100% 100%,0 100%);padding:110px 20px 90px}
 }
@@ -515,24 +506,6 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
       <div class="why-copy reveal">
         <p><strong>Kaikki mitä rakennamme elää ulkona</strong> Suomen säässä, läpi suomalaisten talvien. Se näkyy työtavassamme: kosteudenhallinta, tuuletus ja rakenteelliset detaljit ensin, viimeistely toisena, ja molemmat kunnolla.</p>
         <p>Olemme tarkoituksella pieni tiimi. Samat ihmiset, jotka laskevat tarjouksesi, myös rakentavat sen. Tiedät aina, kuka työmaallasi on ja kenelle soittaa.</p>
-      </div>
-      <div class="why-list reveal">
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Kiinteät tarjoukset, rehellinen laajuus</h4><p>Työmaan yllätyksistä keskustellaan ennen kuin ne laskutetaan.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Rakennettu ilmastoon</h4><p>Detaljit mitoitettu lumikuormalle, pakkaselle ja viistosateelle, ei kopioitu leudommilta markkinoilta.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Kotitalousvähennys</h4><p>Suomalaisena yrityksenä työmme osuus oikeuttaa tyypillisesti kotitalousvähennykseen. Toimitamme tarvittavat dokumentit.</p></div>
-        </div>
-        <div class="why-item">
-          <svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>
-          <div><h4>Selkeää pohjoismaista muotoilua</h4><p>Yksinkertaiset linjat, aidot materiaalit ja mittasuhteet, jotka sopivat taloon, eivät kuvastoon.</p></div>
-        </div>
       </div>
     </div>
   </div>
