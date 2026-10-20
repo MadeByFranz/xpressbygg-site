@@ -1,14 +1,20 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "xpressbygg-site",
+  "main": "worker/index.js",
   "compatibility_date": "2026-07-15",
-  "observability": {
-    "enabled": true
-  },
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   },
-  "compatibility_flags": [
-    "nodejs_compat"
+  // Sends quote requests by email. The receiving address is the QUOTE_TO secret,
+  // set in the Cloudflare dashboard so it never appears in this repo or on the site.
+  "send_email": [{ "name": "QUOTE_MAIL" }],
+  // At most 5 quote requests per visitor per minute.
+  "ratelimits": [
+    { "name": "QUOTE_LIMIT", "namespace_id": "1101", "simple": { "limit": 5, "period": 60 } }
   ]
 }

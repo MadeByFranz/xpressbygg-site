@@ -267,6 +267,10 @@ section{padding:100px 28px}
   transition:color .2s;
 }
 .contact-card a.mail:hover{color:var(--accent)}
+.cc-sub{color:rgba(237,239,232,.7);font-size:15px;margin:10px 0 22px}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:#fff;color:var(--ink)}
+.cc-btn{margin-bottom:30px}
 .contact-card .meta{display:grid;gap:10px}
 .contact-card .meta div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(237,239,232,.7)}
 .contact-card .meta .xmark{margin-top:4px}
@@ -336,7 +340,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
         <li class="hide-m"><a href="#services">Palvelut</a></li>
         <li class="hide-m"><a href="#process">Näin toimimme</a></li>
         <li class="hide-m"><a href="#why">Miksi me</a></li>
-        <li><a class="nav-cta" href="#contact">Pyydä tarjous</a></li>
+        <li><a class="nav-cta" href="/fi/tarjous/">Pyydä tarjous</a></li>
         <li class="lang" aria-label="Language">
           <a href="/" hreflang="sv" lang="sv">SV</a>
           <a href="/fi/" hreflang="fi" aria-current="true">FI</a>
@@ -364,7 +368,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     </h1>
     <p class="hero-sub">Xpress Bygg on ammattitaitoinen pohjoismainen rakennustiimi, joka rakentaa saunat, terassit, julkisivut ja katot eli kotisi säälle alttiit osat. Siistiä työtä, kiinteät tarjoukset, ei yllätyksiä.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="#contact">Pyydä tarjous</a>
+      <a class="btn btn-solid" href="/fi/tarjous/">Pyydä tarjous</a>
       <a class="btn btn-ghost" href="#services">Katso mitä rakennamme</a>
     </div>
   </div>
@@ -544,11 +548,12 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     <div class="reveal">
       <span class="label" style="color:rgba(237,239,232,.5)">Pyydä tarjous</span>
       <h2 class="display" style="margin-top:14px">Kerro, mitä olet<br><span class="accent">suunnittelemassa.</span></h2>
-      <p class="contact-note">Lähetä muutama rivi projektistasi: mitä, missä ja suunnilleen milloin. Palaamme asiaan ja sovimme katselmuksen.</p>
+      <p class="contact-note">Kuvaile projektisi ja liitä mielellään kuvia. Palaamme asiaan ja sovimme katselmuksen.</p>
     </div>
     <div class="contact-card reveal">
-      <span class="label">Sähköposti</span>
-      <a class="mail" href="mailto:info@xpressbygg.com">info@xpressbygg.com</a>
+      <span class="label">Tarjouspyyntö</span>
+      <p class="cc-sub">Nimi, osoite, kuvaus ja kuvat. Vie pari minuuttia.</p>
+      <a class="btn btn-accent cc-btn" href="/fi/tarjous/">Täytä tarjouspyyntö &rarr;</a>
       <div class="meta">
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Kotipaikka Raasepori. Palvelemme Raaseporissa ja lähialueilla</div>
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Katselmukset ja tarjoukset veloituksetta</div>

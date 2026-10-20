@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Describe your project and send photos. Saunas, decks, facades and roofs in Raseborg and surrounding areas. Free site visit and quote.">
+<meta property="og:title" content="Get a quote | Xpress Bygg">
+<meta property="og:description" content="Describe your project and send photos. Saunas, decks, facades and roofs in Raseborg and surrounding areas. Free site visit and quote.">
+<meta property="og:image" content="/logo.png">
+<link rel="canonical" href="https://xpressbygg.com/en/quote/">
+<link rel="alternate" hreflang="sv" href="https://xpressbygg.com/offert/">
+<link rel="alternate" hreflang="fi" href="https://xpressbygg.com/fi/tarjous/">
+<link rel="alternate" hreflang="en" href="https://xpressbygg.com/en/quote/">
+<link rel="alternate" hreflang="x-default" href="https://xpressbygg.com/offert/">
+<title>Get a quote | Xpress Bygg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,800;1,700;1,800&family=Saira:wght@500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --paper:#EEEFF1;        /* light concrete */
+  --panel:#E3E5E8;
+  --ink:#14161A;
+  --muted:#5A606B;
+  --line:rgba(20,22,26,.14);
+  --accent:#0A84FF;
+  --accent-deep:#0060DF;
+  --night:#15181D;        /* dark band only */
+  --slant:-12deg;
+  --radius:2px;
+}
+
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Figtree',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+::selection{background:var(--accent);color:#fff}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ── type helpers ─────────────────────── */
+.display{
+  font-family:'Saira Condensed',sans-serif;
+  font-style:italic;
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:.92;
+  letter-spacing:.005em;
+}
+.label{
+  font-family:'Saira',sans-serif;
+  font-weight:600;
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* X bullet: the logo glyph as a marker */
+.xmark{display:inline-block;width:.85em;height:.85em;flex-shrink:0;transform:translateY(.08em)}
+
+/* ── NAV ──────────────────────────────── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;
+}
+.brand{display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--ink)}
+.brand-x{height:24px;width:24px;flex-shrink:0;overflow:visible}
+.brand-word{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;
+  font-size:24px;line-height:1;letter-spacing:.02em;text-transform:uppercase;
+  white-space:nowrap;display:flex;align-items:baseline;gap:6px;
+}
+.brand-word b{font-weight:800;font-style:italic}
+.brand-word i{font-weight:600;font-style:italic;letter-spacing:.14em}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{
+  font-family:'Saira',sans-serif;font-weight:600;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;
+  text-decoration:none;color:var(--ink);
+  padding:4px 0;border-bottom:2px solid transparent;
+  transition:border-color .2s;
+}
+nav a:hover{border-color:var(--accent)}
+.nav-cta{
+  background:var(--ink);color:#fff !important;
+  padding:9px 18px !important;border:none !important;
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--accent-deep)}
+.lang{display:flex;gap:2px;margin-left:6px}
+.lang a{font-size:11px;padding:4px 6px;border-bottom:none !important;color:var(--muted)}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current]{color:var(--ink);border-bottom:2px solid var(--accent) !important}
+
+/* ── HERO ─────────────────────────────── */
+.hero{
+  position:relative;
+  padding:170px 28px 110px;
+  max-width:1180px;margin:0 auto;
+  overflow-x:visible;overflow-y:clip;
+}
+.hero-x{
+  position:absolute;
+  right:-150px;top:calc(50% + 28px);
+  transform:translateY(-50%);
+  width:min(70vw,860px);height:auto;
+  opacity:.10;
+  pointer-events:none;
+  z-index:0;
+}
+.hero-x polygon{stroke-width:15px}
+@media(min-width:881px){
+  .hero{min-height:880px;display:flex;flex-direction:column;justify-content:center;padding-top:110px;padding-bottom:60px}
+}
+.hero-content{position:relative;z-index:1;max-width:820px}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-bottom:26px;
+}
+.hero h1{
+  font-size:clamp(34px,8.6vw,112px);
+}
+.hero h1 .line{display:block;white-space:nowrap}
+.hero h1 .accent{color:var(--accent)}
+.hero-sub{
+  margin-top:28px;
+  max-width:520px;
+  font-size:17px;
+  color:var(--muted);
+}
+.hero-actions{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  font-family:'Saira',sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.16em;text-transform:uppercase;
+  text-decoration:none;
+  padding:15px 30px;
+  clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);
+  transition:background .2s,color .2s;
+  display:inline-block;
+}
+.btn-solid{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--accent-deep)}
+.btn-ghost{background:var(--panel);color:var(--ink)}
+.btn-ghost:hover{background:var(--accent);color:#fff}
+
+/* service ticker strip under hero */
+.strip{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--panel);
+}
+.strip-inner{
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.strip a{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 10px;
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:700;
+  font-size:20px;letter-spacing:.04em;text-transform:uppercase;
+  text-decoration:none;
+  border-right:1px solid var(--line);
+  transition:background .2s,color .2s;
+}
+.strip a:last-child{border-right:none}
+.strip a:hover{background:var(--ink);color:#fff}
+
+/* ── SECTIONS ─────────────────────────── */
+section{padding:100px 28px}
+.container{max-width:1180px;margin:0 auto}
+.sec-head{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(38px,5.4vw,68px)}
+.sec-head h2 .accent{color:var(--accent)}
+
+/* services */
+.svc-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px;
+}
+.svc{
+  background:#F7F8FA;
+  border:1px solid var(--line);
+  padding:34px 34px 30px;
+  transition:border-color .25s, transform .25s;
+  position:relative;
+}
+.svc:hover{border-color:var(--accent);transform:translateY(-3px)}
+.svc svg.illu{width:100%;height:150px;margin-bottom:22px;stroke:var(--ink);}
+.svc h3{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:800;
+  text-transform:uppercase;font-size:30px;letter-spacing:.02em;
+  margin-bottom:10px;
+}
+.svc h3 em{font-style:italic;color:var(--accent)}
+.svc p{color:var(--muted);font-size:15px}
+.svc ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+.svc li{display:flex;gap:10px;font-size:14px;align-items:flex-start}
+.svc li .xmark{margin-top:4px}
+
+/* process */
+#process{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--panel);padding:32px 26px 36px}
+.step-num{
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:800;
+  font-size:52px;color:var(--accent);line-height:1;display:block;margin-bottom:14px;
+}
+.step h3{font-family:'Saira',sans-serif;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* why us */
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.why-copy p{font-size:17px;color:var(--muted);margin-bottom:18px}
+.why-copy p strong{color:var(--ink);font-weight:600}
+.why-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.why-item{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:20px 4px;border-bottom:1px solid var(--line);
+}
+.why-item .xmark{width:1.05em;height:1.05em;margin-top:4px}
+.why-item h4{font-family:'Saira',sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.why-item p{font-size:14px;color:var(--muted)}
+
+/* ── CONTACT (single dark band) ───────── */
+#contact{
+  background:var(--night);
+  color:#EDEFE8;
+  clip-path:polygon(0 44px,100% 0,100% 100%,0 100%);
+  padding:150px 28px 110px;
+  margin-top:0;
+}
+.contact-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:center}
+#contact h2{font-size:clamp(44px,6.5vw,84px)}
+#contact h2 .accent{color:var(--accent)}
+#contact .contact-note{margin-top:22px;color:rgba(237,239,232,.6);max-width:440px;font-size:16px}
+.contact-card{
+  border:1px solid rgba(237,239,232,.18);
+  padding:38px 36px;
+}
+.contact-card .label{color:rgba(237,239,232,.5)}
+.contact-card a.mail{
+  display:block;
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:700;
+  font-size:clamp(22px,2.6vw,30px);
+  color:#fff;text-decoration:none;
+  margin:10px 0 26px;
+  word-break:break-all;
+  border-bottom:2px solid transparent;
+  width:fit-content;
+  transition:color .2s;
+}
+.contact-card a.mail:hover{color:var(--accent)}
+.cc-sub{color:rgba(237,239,232,.7);font-size:15px;margin:10px 0 22px}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:#fff;color:var(--ink)}
+.cc-btn{margin-bottom:30px}
+.contact-card .meta{display:grid;gap:10px}
+.contact-card .meta div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(237,239,232,.7)}
+.contact-card .meta .xmark{margin-top:4px}
+
+/* footer */
+footer{background:var(--night);color:rgba(237,239,232,.45);padding:26px 28px;border-top:1px solid rgba(237,239,232,.12)}
+.foot-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot-inner .brand{transform:scale(.82);transform-origin:left center}
+.foot-inner .label{color:rgba(237,239,232,.4);font-size:10px}
+
+/* ── reveal ───────────────────────────── */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* ── mobile ───────────────────────────── */
+@media(max-width:880px){
+  nav ul{gap:18px}
+  nav ul li.hide-m{display:none}
+  .hero{padding:140px 20px 80px}
+  .hero-x{right:-150px;width:560px;opacity:.07}
+  .hero-x polygon{stroke-width:10px}
+  .strip-inner{grid-template-columns:1fr 1fr}
+  .strip a{border-bottom:1px solid var(--line)}
+  .strip a:nth-child(2n){border-right:none}
+  section{padding:72px 20px}
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .why-layout{grid-template-columns:1fr;gap:36px}
+  .contact-inner{grid-template-columns:1fr;gap:44px}
+  #contact{clip-path:polygon(0 26px,100% 0,100% 100%,0 100%);padding:110px 20px 90px}
+}
+@media(max-width:600px){
+  nav ul li:has(.nav-cta){display:none}
+  .lang{margin-left:0}
+}
+@media(max-width:520px){
+  .steps{grid-template-columns:1fr}
+  .nav-inner{padding:12px 16px}
+  .brand svg{height:22px}
+}
+
+/* ── QUOTE PAGE ───────────────────────── */
+.quote{padding:130px 28px 100px}
+.quote-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:start}
+.quote-side{position:sticky;top:110px}
+.quote-side h1{font-size:clamp(40px,4.6vw,66px);margin-top:14px}
+.quote-side h1 .line{display:block;white-space:nowrap}
+.quote-side h1 .accent{color:var(--accent)}
+.quote-intro{margin-top:22px;color:var(--muted);font-size:16px;max-width:440px}
+.quote-steps{margin-top:40px;border-top:1px solid var(--line)}
+.quote-steps .label{display:block;margin:22px 0 6px}
+.qstep{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:14px 0;border-bottom:1px solid var(--line)}
+.qstep b{font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:800;font-size:30px;line-height:1;color:var(--accent)}
+.qstep h3{font-family:'Saira',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.qstep p{font-size:14px;color:var(--muted);margin-top:2px}
+.quote-perks{margin-top:26px;display:grid;gap:9px}
+.quote-perks div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.quote-perks .xmark{margin-top:4px}
+
+.qform,.quote-done{background:#F7F8FA;border:1px solid var(--line);padding:38px 38px 34px}
+.qform[hidden],.quote-done[hidden]{display:none}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px}
+.qfield{display:flex;flex-direction:column;gap:7px;min-width:0}
+.qfield.full{grid-column:1/-1}
+.qform label,.qform legend{font-family:'Saira',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.qform .opt{color:var(--muted);font-weight:500;letter-spacing:.06em;text-transform:none;font-family:'Figtree',sans-serif;font-size:12px}
+.qform input[type=text],.qform input[type=tel],.qform input[type=email],.qform select,.qform textarea{
+  font:inherit;font-size:16px;color:var(--ink);background:#fff;
+  border:1px solid rgba(20,22,26,.22);border-radius:0;padding:12px 14px;width:100%;
+  transition:border-color .15s, box-shadow .15s;
+}
+.qform textarea{min-height:170px;resize:vertical;line-height:1.55}
+.qform select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:40px}
+.qform input:focus,.qform select:focus,.qform textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(10,132,255,.18)}
+.qform [aria-invalid=true]{border-color:#D7263D !important;box-shadow:0 0 0 3px rgba(215,38,61,.12)}
+.qform fieldset{border:none;padding:0;margin:0;min-width:0}
+.qform legend{margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Saira Condensed',sans-serif;font-style:italic;font-weight:700;font-size:18px;letter-spacing:.03em;text-transform:uppercase;
+  padding:8px 16px 8px 14px;background:#fff;border:1px solid rgba(20,22,26,.22);color:var(--ink);
+  transition:background .15s,color .15s,border-color .15s;cursor:pointer;
+}
+.chip span svg{width:.7em;height:.7em;opacity:.35;transition:opacity .15s}
+.chip input:checked + span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:checked + span svg{opacity:1}
+.chip input:focus-visible + span{outline:3px solid var(--accent);outline-offset:2px}
+
+.attach{border:1px solid rgba(20,22,26,.22);border-top:none;background:#fff;margin-top:-7px}
+.drop{
+  display:flex;align-items:center;gap:14px;padding:14px;cursor:pointer;
+  border-top:1px dashed rgba(20,22,26,.22);background:#FBFBFC;transition:background .15s;
+}
+.drop:hover,.drop.over{background:#EEF5FF}
+.drop:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.drop .ico{width:40px;height:40px;flex-shrink:0;display:grid;place-items:center;background:var(--ink);color:#fff;
+  clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.drop .ico svg{width:20px;height:20px}
+.drop strong{display:block;font-family:'Saira',sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.drop small{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:2px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;padding:12px 14px 14px;border-top:1px solid rgba(20,22,26,.1)}
+.thumbs[hidden]{display:none}
+.thumbs figure{position:relative;aspect-ratio:1;background:var(--panel);overflow:hidden}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.thumbs .rm{position:absolute;top:4px;right:4px;width:26px;height:26px;border:none;background:rgba(20,22,26,.78);color:#fff;font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.thumbs .rm:hover{background:#D7263D}
+.photo-note{font-size:13px;color:var(--muted);min-height:1.2em;margin-top:8px}
+.human-check{margin-top:4px}
+.human-check[hidden]{display:none}
+.qfoot{margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.qfoot p{font-size:13px;color:var(--muted);max-width:300px}
+.qform button[type=submit]{border:none;cursor:pointer;font:inherit}
+.qform button[type=submit].btn{font-family:'Saira',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:16px 34px}
+.qform button[disabled]{opacity:.6;cursor:progress}
+.form-status{margin-top:18px;padding:12px 14px;font-size:14px;border-left:3px solid}
+.form-status[hidden]{display:none}
+.form-status.error{background:#FDECEE;border-color:#D7263D;color:#7A1020}
+.form-status.warn{background:#FFF6E0;border-color:#E0A100;color:#6A4A00}
+.hp{position:absolute !important;left:-10000px !important;width:1px;height:1px;overflow:hidden}
+
+.quote-done{text-align:left;padding:54px 42px}
+.quote-done:focus{outline:none}
+.quote-done .tick{width:56px;height:56px;margin-bottom:22px}
+.quote-done h2{font-size:clamp(40px,5vw,64px)}
+.quote-done h2 .accent{color:var(--accent)}
+.quote-done p{margin-top:16px;color:var(--muted);font-size:16px;max-width:460px}
+.quote-done .btn{margin-top:30px}
+
+@media(max-width:880px){
+  .quote{padding:110px 20px 72px}
+  .quote-inner{grid-template-columns:minmax(0,1fr);gap:40px}
+  .quote-side h1{font-size:clamp(28px,8.4vw,46px)}
+  .quote-side{position:static}
+  .quote-steps{display:none}
+  .qform,.quote-done{padding:26px 18px 24px}
+  .quote-done h2{font-size:clamp(34px,10vw,48px)}
+}
+@media(max-width:560px){
+  .qgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="xglyph">
+      <polygon points="18,0 50,38 82,0 100,0 59,49 100,98 82,98 50,60 18,98 0,98 41,49 0,0"/>
+    </g>
+  </defs>
+</svg>
+
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="/en/" aria-label="Xpress Bygg">
+      <svg class="brand-x" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)" transform="skewX(-6) translate(6,0)"/></svg>
+      <span class="brand-word"><b>PRESS</b><i>BYGG</i></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li class="hide-m"><a href="/en/#services">Services</a></li>
+        <li class="hide-m"><a href="/en/#process">How we work</a></li>
+        <li class="hide-m"><a href="/en/#why">Why us</a></li>
+        <li><a class="nav-cta" href="/en/quote/" aria-current="page">Get a quote</a></li>
+        <li class="lang" aria-label="Language">
+          <a href="/offert/" hreflang="sv" lang="sv">SV</a>
+          <a href="/fi/tarjous/" hreflang="fi" lang="fi">FI</a>
+          <a href="/en/quote/" hreflang="en" aria-current="true">EN</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="quote" id="top">
+  <div class="quote-inner">
+    <aside class="quote-side">
+      <span class="label">Get a quote</span>
+      <h1 class="display" id="quote-h1"><span class="line">Tell us what</span><span class="line accent">you're planning.</span></h1>
+      <p class="quote-intro">Describe the project and add photos of the site or a sketch with rough dimensions if you have them. The more we know, the better the first conversation.</p>
+      <div class="quote-steps">
+        <span class="label">What happens next</span>
+        <div class="qstep"><b>1</b><div><h3>You send the request</h3><p>The form takes a couple of minutes.</p></div></div>
+<div class="qstep"><b>2</b><div><h3>We get in touch</h3><p>We go through your project and contact you to book a site visit.</p></div></div>
+<div class="qstep"><b>3</b><div><h3>Fixed quote</h3><p>After the visit you get a written quote with materials, labour and schedule.</p></div></div>
+      </div>
+      <div class="quote-perks">
+        <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Site visits and quotes free of charge</div>
+<div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>We work in English, Finnish and Swedish</div>
+<div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Based in Raseborg, serving Raseborg &amp; surrounding areas</div>
+      </div>
+    </aside>
+
+    <div>
+      <form class="qform" id="quote-form" novalidate>
+        <input type="hidden" name="lang" value="en">
+        <input type="hidden" name="t" value="">
+        <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="qgrid">
+          <div class="qfield full">
+            <label for="q-name">Name</label>
+            <input id="q-name" type="text" name="name" autocomplete="name" required maxlength="120">
+          </div>
+          <div class="qfield">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" type="tel" name="phone" autocomplete="tel" required maxlength="40">
+          </div>
+          <div class="qfield">
+            <label for="q-email">Email</label>
+            <input id="q-email" type="email" name="email" autocomplete="email" required maxlength="160">
+          </div>
+          <div class="qfield full">
+            <label for="q-address">Address of the work site</label>
+            <input id="q-address" type="text" name="address" autocomplete="street-address" required maxlength="240" placeholder="Street address, postcode and town">
+          </div>
+          <fieldset class="qfield full">
+            <legend>What is it about? <span class="opt">(optional)</span></legend>
+            <div class="chips">
+            <label class="chip"><input type="checkbox" name="work" value="Sauna"><span><svg viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="currentColor"/></svg>Sauna</span></label>
+<label class="chip"><input type="checkbox" name="work" value="Decking"><span><svg viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="currentColor"/></svg>Decking</span></label>
+<label class="chip"><input type="checkbox" name="work" value="Facade"><span><svg viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="currentColor"/></svg>Facade</span></label>
+<label class="chip"><input type="checkbox" name="work" value="Roof"><span><svg viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="currentColor"/></svg>Roof</span></label>
+<label class="chip"><input type="checkbox" name="work" value="Other"><span><svg viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="currentColor"/></svg>Other</span></label>
+            </div>
+          </fieldset>
+          <div class="qfield full">
+            <label for="q-timing">When should the work be done? <span class="opt">(optional)</span></label>
+            <select id="q-timing" name="timing"><option value="">Choose a timeframe</option><option>Within 3 months</option><option>This year</option><option>Next year</option><option>Just planning for now</option></select>
+          </div>
+          <div class="qfield full">
+            <label for="q-message">Describe the project</label>
+            <textarea id="q-message" name="message" required maxlength="5000" placeholder="What do you want to build or renovate? Rough dimensions, materials, current condition, wishes…"></textarea>
+            <div class="attach">
+              <div class="drop" id="drop" role="button" tabindex="0" aria-describedby="photo-note">
+                <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+                <span><strong>Add photos <span class="opt">(optional)</span></strong><small>Drag here or click. Photos of the site, sketches with dimensions. Up to 8 photos.</small></span>
+              </div>
+              <div class="thumbs" id="thumbs" hidden></div>
+            </div>
+            <input id="photo-input" type="file" name="photos-picker" accept="image/*" multiple hidden>
+            <div class="photo-note" id="photo-note" aria-live="polite"></div>
+          </div>
+          <div class="qfield full human-check" id="human-check" hidden></div>
+        </div>
+
+        <div class="form-status" id="form-status" role="alert" hidden></div>
+
+        <div class="qfoot">
+          <p>We only use your details to answer your request.</p>
+          <button type="submit" class="btn btn-solid">Send request</button>
+        </div>
+      </form>
+
+      <div class="quote-done" id="quote-done" tabindex="-1" hidden>
+        <svg class="tick" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)" transform="skewX(-6) translate(6,0)"/></svg>
+        <h2 class="display">Thank you<span id="quote-done-name-wrap">, <span class="accent" id="quote-done-name"></span></span>!</h2>
+        <p>Your request has been sent. We'll go through it and get in touch to book a site visit.</p>
+        <a class="btn btn-ghost" href="/en/">Back to the home page</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span class="brand" style="color:#EDEFE8">
+      <svg class="brand-x" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)" transform="skewX(-6) translate(6,0)"/></svg>
+      <span class="brand-word"><b>PRESS</b><i>BYGG</i></span>
+    </span>
+    <span class="label">Saunas · Deckings · Facades · Roofs</span>
+    <span class="label">© <span id="yr">2026</span> Xpress Bygg</span>
+  </div>
+</footer>
+
+<script type="application/json" id="quote-text">{"photoMax": "Up to {n} photos per request.", "photoBad": "A photo couldn't be read. Use a JPG or PNG.", "photoAlt": "Photo {n}", "photoRemove": "Remove photo", "photoWorking": "Preparing photos…", "photoCount": "{n} of {max} photos", "missing": "Fill in the highlighted fields.", "errors": {"missing": "Fill in the highlighted fields.", "photo_type": "One of the photos couldn't be sent. Try a different photo.", "photo_too_large": "A photo is too large. Try a smaller one.", "too_large": "The photos are too large together. Remove a few and try again.", "rate": "You've sent several requests in a short time. Wait a moment and try again.", "human_check": "Confirm you're human and try again.", "config": "The form isn't working right now. Try again later.", "server": "Something went wrong sending your request. Try again in a moment.", "network": "No connection. Check your internet and try again."}, "lang": "en", "send": "Send request", "sending": "Sending…"}</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// keep each heading line whole: shrink the text until the longest line fits
+(function(){
+  const h = document.getElementById('quote-h1');
+  function fit(){
+    h.style.fontSize = '';
+    const max = h.parentElement.clientWidth;
+    let size = parseFloat(getComputedStyle(h).fontSize), guard = 40;
+    const widest = () => Math.max(...[...h.querySelectorAll('.line')].map(l => l.scrollWidth));
+    while (widest() > max && size > 20 && guard--) { size *= 0.95; h.style.fontSize = size + 'px'; }
+  }
+  fit(); addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
+<script src="/assets/quote.js" defer></script>
+</body>
+</html>

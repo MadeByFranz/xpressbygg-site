@@ -267,6 +267,10 @@ section{padding:100px 28px}
   transition:color .2s;
 }
 .contact-card a.mail:hover{color:var(--accent)}
+.cc-sub{color:rgba(237,239,232,.7);font-size:15px;margin:10px 0 22px}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:#fff;color:var(--ink)}
+.cc-btn{margin-bottom:30px}
 .contact-card .meta{display:grid;gap:10px}
 .contact-card .meta div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(237,239,232,.7)}
 .contact-card .meta .xmark{margin-top:4px}
@@ -336,7 +340,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
         <li class="hide-m"><a href="#services">Services</a></li>
         <li class="hide-m"><a href="#process">How we work</a></li>
         <li class="hide-m"><a href="#why">Why us</a></li>
-        <li><a class="nav-cta" href="#contact">Get a quote</a></li>
+        <li><a class="nav-cta" href="/en/quote/">Get a quote</a></li>
         <li class="lang" aria-label="Language">
           <a href="/" hreflang="sv" lang="sv">SV</a>
           <a href="/fi/" hreflang="fi" lang="fi">FI</a>
@@ -364,7 +368,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     </h1>
     <p class="hero-sub">Xpress Bygg is a team of skilled Nordic craftsmen building saunas, terraces, facades and roofs: the parts of your home that face the weather. Clean work, fixed quotes, no surprises.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="#contact">Request a quote</a>
+      <a class="btn btn-solid" href="/en/quote/">Request a quote</a>
       <a class="btn btn-ghost" href="#services">See what we build</a>
     </div>
   </div>
@@ -544,11 +548,12 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     <div class="reveal">
       <span class="label" style="color:rgba(237,239,232,.5)">Get a quote</span>
       <h2 class="display" style="margin-top:14px">Tell us what<br>you're <span class="accent">planning.</span></h2>
-      <p class="contact-note">Send a few lines about your project: what, where, and roughly when. We'll get back to you to arrange a site visit.</p>
+      <p class="contact-note">Describe your project and add photos if you have them. We'll get back to you to arrange a site visit.</p>
     </div>
     <div class="contact-card reveal">
-      <span class="label">Email</span>
-      <a class="mail" href="mailto:info@xpressbygg.com">info@xpressbygg.com</a>
+      <span class="label">Quote request</span>
+      <p class="cc-sub">Name, address, description and photos. Takes a couple of minutes.</p>
+      <a class="btn btn-accent cc-btn" href="/en/quote/">Fill in the quote request &rarr;</a>
       <div class="meta">
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Based in Raseborg, serving Raseborg &amp; surrounding areas</div>
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Site visits and quotes free of charge</div>

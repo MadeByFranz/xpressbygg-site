@@ -267,6 +267,10 @@ section{padding:100px 28px}
   transition:color .2s;
 }
 .contact-card a.mail:hover{color:var(--accent)}
+.cc-sub{color:rgba(237,239,232,.7);font-size:15px;margin:10px 0 22px}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:#fff;color:var(--ink)}
+.cc-btn{margin-bottom:30px}
 .contact-card .meta{display:grid;gap:10px}
 .contact-card .meta div{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(237,239,232,.7)}
 .contact-card .meta .xmark{margin-top:4px}
@@ -336,7 +340,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
         <li class="hide-m"><a href="#services">Tjänster</a></li>
         <li class="hide-m"><a href="#process">Så jobbar vi</a></li>
         <li class="hide-m"><a href="#why">Varför vi</a></li>
-        <li><a class="nav-cta" href="#contact">Begär offert</a></li>
+        <li><a class="nav-cta" href="/offert/">Begär offert</a></li>
         <li class="lang" aria-label="Language">
           <a href="/" hreflang="sv" aria-current="true">SV</a>
           <a href="/fi/" hreflang="fi" lang="fi">FI</a>
@@ -364,7 +368,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     </h1>
     <p class="hero-sub">Xpress Bygg är ett team av skickliga nordiska hantverkare som bygger bastur, terrasser, fasader och tak, de delar av ditt hem som möter vädret. Rent arbete, fasta offerter, inga överraskningar.</p>
     <div class="hero-actions">
-      <a class="btn btn-solid" href="#contact">Begär offert</a>
+      <a class="btn btn-solid" href="/offert/">Begär offert</a>
       <a class="btn btn-ghost" href="#services">Se vad vi bygger</a>
     </div>
   </div>
@@ -544,11 +548,12 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offse
     <div class="reveal">
       <span class="label" style="color:rgba(237,239,232,.5)">Begär offert</span>
       <h2 class="display" style="margin-top:14px">Berätta vad<br>du <span class="accent">planerar.</span></h2>
-      <p class="contact-note">Skicka några rader om ditt projekt: vad, var och ungefär när. Vi återkommer och bokar ett platsbesök.</p>
+      <p class="contact-note">Beskriv ditt projekt och bifoga gärna bilder. Vi återkommer och bokar ett platsbesök.</p>
     </div>
     <div class="contact-card reveal">
-      <span class="label">E-post</span>
-      <a class="mail" href="mailto:info@xpressbygg.com">info@xpressbygg.com</a>
+      <span class="label">Offertförfrågan</span>
+      <p class="cc-sub">Namn, adress, beskrivning och bilder. Tar ett par minuter.</p>
+      <a class="btn btn-accent cc-btn" href="/offert/">Fyll i offertförfrågan &rarr;</a>
       <div class="meta">
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Hemort Raseborg. Vi betjänar Raseborg med omnejd</div>
         <div><svg class="xmark" viewBox="0 0 100 98" aria-hidden="true"><use href="#xglyph" fill="var(--accent)"/></svg>Platsbesök och offerter utan kostnad</div>
